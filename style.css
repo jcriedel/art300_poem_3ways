@@ -1,0 +1,134 @@
+body {
+  font-family: "IM Fell DW Pica" ;
+    text-align: center;
+    background-color: #ABD0A6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 3vw;
+    margin: auto;
+  }
+  h2 {
+    font-size: 2vw;
+    margin: auto;
+  }
+
+
+  p { 
+    font-size: 1vw;
+  }
+  
+  .poem {
+    width: 50vw;
+    height: 2500px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+      "head head head"
+      "col-left col-mid col-right"
+      "foot foot foot";
+    grid-template-rows: 8vw 1fr 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
+    border: solid black 50px;
+    background-color: darkgray;
+  }
+  
+  .header {
+    grid-area: head;
+    background-color:whitesmoke;
+  }
+  
+  .col-left {
+    padding: 10px;
+    grid-area: col-left;
+    background-color: #FFE373;
+  }
+
+  .col-mid {
+    padding: 10px;
+    grid-area: col-mid;
+    background-color: #FD5E53;
+    margin-top: 750px;
+  }
+
+  .col-right {
+    padding: 10px;
+    grid-area: col-right;
+    background-color: #152852;
+    margin-top: 1500px;
+    color: whitesmoke;
+  }
+  
+  .footer {
+    grid-area: foot;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  
+  /* Tablet Styles */
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+
+  
+    h1 {
+      font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 3vw;
+      }
+    p {
+      font-size: 2vw;
+    }
+
+    .poem {
+      width: 80vw;
+      grid-template-rows: 10vw 1fr 50px;
+      border: solid black 25px;
+    }
+  }
+  
+  /* Phone Styles */
+  @media screen and (max-width: 768px) {
+  
+    h1 {
+      font-size: 7vw;
+      
+    }
+    h2 {
+        font-size: 4vw;
+      }
+    p {
+      font-size: 4vw;
+    }
+    .poem {
+      width: 90vw;
+      grid-template-areas:
+        "head "
+        "col-left"
+        "col-mid"
+        "col-right"
+        "foot";
+      grid-template-rows: 15vw 1fr 1fr 1fr 50px;
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+      border: solid black 5px;
+    }
+    .col-mid {
+      margin-top: 0;
+    }
+    .col-right {
+      margin-top: 0;
+    }
+    .poem{
+      width: 80vw;
+      height: auto;
+    }
+  }
+  
